@@ -14,14 +14,13 @@ while True:
         print("Este programa recibe unicamente numeros")
         continue
 
-#Se valida si el numero es negativo   
+#Se valida si el numero es negativo
 if NumEntrada < 0:
     print("Error de sintaxis")
 
 #Se calcula el factorial del valor ingresado
 else:
-    resultado=1
+    RESULTADO=1
     for i in range(1,NumEntrada+1):
-        resultado *= i
-    print("El factorial de {0} equivale a {1}".format(NumEntrada,resultado))
-
+        RESULTADO *= i
+    print("El factorial de {NumEntrada} equivale a {RESULTADO}")

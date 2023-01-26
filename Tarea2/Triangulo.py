@@ -1,4 +1,4 @@
-"""Triangulo_de_numeros
+"""triangulo_de_numeros
 
 Se crea un triangulo con numeros que llegan hasta el valor ingresado
 """
@@ -21,5 +21,6 @@ if NumEntrada < 1:
 else:
     concatenado=""
     for i in range(1,NumEntrada+1):
-        concatenado += str(i)+" "
+        #concatenado += str(i)+" "
+        concatenado= ''.join([concatenado, str(i)])
         print(concatenado)

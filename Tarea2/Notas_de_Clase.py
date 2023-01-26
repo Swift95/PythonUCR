@@ -17,8 +17,9 @@ Diccionario_Notas= {
 }
 
 #Impresion de datos seleccionado
-print("Estudiante: %s" % (Diccionario_Notas["class"]["student"]["name"]))
-print("Notas:")
+notas=[]
 for materia, nota in Diccionario_Notas["class"]["student"]["marks"].items():
-    print("  {0}: {1}".format(materia,nota))
-    
+    notas.append(nota)
+
+promedio= sum(notas)/len(notas)
+print("{0}: {1}".format(Diccionario_Notas["class"]["student"]["name"],promedio))
