@@ -23,4 +23,4 @@ else:
     RESULTADO=1
     for i in range(1,NumEntrada+1):
         RESULTADO *= i
-    print("El factorial de {NumEntrada} equivale a {RESULTADO}")
+    print(f"El factorial de {NumEntrada} equivale a {RESULTADO}")
