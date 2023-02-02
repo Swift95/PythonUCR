@@ -5,21 +5,24 @@ Este es un programa que ayuda a realizar calculos simples
 import operaciones
 import validaciones
 
-#Presentacion de opciones
-print("Que tipo de operacion desea realizar?")
-print("1) Suma")
-print("2) Resta")
-print("3) Multiplicacion")
-print("4) Division")
-print("5) Numero Factorial")
-print("6) Exponentes")
-print("7) Cerrar Calculadora \n")
 
 history= open("CalcHistory.txt", "a",encoding="utf-8")
 history.write("Calc Software 1.0 History \n")
 history.close()
 
 while True:
+
+    #Presentacion de opciones
+    print("Que tipo de operacion desea realizar?")
+    print("1) Suma")
+    print("2) Resta")
+    print("3) Multiplicacion")
+    print("4) Division")
+    print("5) Numero Factorial")
+    print("6) Exponentes")
+    print("7) Cerrar Calculadora \n")
+
+
     #Seleccion de operacion
     tipo_operacion= validaciones.entrada("Digite el numero de la operacion a realizar \n")
 
@@ -50,6 +53,7 @@ while True:
             resta_valores=validaciones.entrada("Digite un numero a restar \n")
             operacion.append(resta_valores)
         result=(f"{operaciones.operacion_texto(operacion,'-')}=  {operaciones.restar(operacion)}")
+        print(result)
         history= open("CalcHistory.txt", "a",encoding="utf-8")
         history.write(f"{str(result)} \n")
         history.close()
@@ -64,6 +68,7 @@ while True:
                 break
             operacion.append(multiplicador)
         result=(f"{operaciones.operacion_texto(operacion,'x')}=  {operaciones.multiplicar(operacion)}")
+        print(result)
         history= open("CalcHistory.txt", "a",encoding="utf-8")
         history.write(f"{str(result)} \n")
         history.close()
@@ -77,6 +82,7 @@ while True:
             division_valores=validaciones.entrada("Digite un numero a dividir \n")
             operacion.append(division_valores)
         result=(f"{operaciones.operacion_texto(operacion,'/')}=  {operaciones.dividir(operacion)}")
+        print(result)
         history= open("CalcHistory.txt", "a",encoding="utf-8")
         history.write(f"{str(result)} \n")
         history.close()
@@ -91,6 +97,7 @@ while True:
             print("El numero es menor a 0")
         else:
             result=(f"{factor}!=  {operaciones.factorial(factor)} ")
+            print(result)
             history= open("CalcHistory.txt", "a",encoding="utf-8")
             history.write(f"{str(result)} \n")
             history.close()
@@ -105,6 +112,7 @@ while True:
             exponente_valores=validaciones.entrada("Digite la base y luego el exponente \n")
             operacion.append(exponente_valores)
         result=(f"{operaciones.operacion_texto(operacion,'^')}=  {operaciones.exponencial(operacion)}")
+        print(result)
         history= open("CalcHistory.txt", "a",encoding="utf-8")
         history.write(f"{str(result)} \n")
         history.close()
