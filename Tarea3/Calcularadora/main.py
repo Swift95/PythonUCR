@@ -5,10 +5,7 @@ Este es un programa que ayuda a realizar calculos simples
 import operaciones
 import validaciones
 
-
-history= open("CalcHistory.txt", "a",encoding="utf-8")
-history.write("Calc Software 1.0 History \n")
-history.close()
+validaciones.historial("Calc Software 1.0 History \n")
 
 while True:
 
@@ -41,9 +38,7 @@ while True:
             operacion.append(sumando)
         result=f"{operaciones.operacion_texto(operacion,'+')}=  {operaciones.sumar(operacion)}"
         print(result)
-        history= open("CalcHistory.txt", "a",encoding="utf-8")
-        history.write(f"{str(result)} \n")
-        history.close()
+        validaciones.historial(result)
     #endregion
 
     #region Operacion_Resta
@@ -54,9 +49,7 @@ while True:
             operacion.append(resta_valores)
         result=(f"{operaciones.operacion_texto(operacion,'-')}=  {operaciones.restar(operacion)}")
         print(result)
-        history= open("CalcHistory.txt", "a",encoding="utf-8")
-        history.write(f"{str(result)} \n")
-        history.close()
+        validaciones.historial(result)
     #endregion
 
     #region Operacion_Multiplicar
@@ -69,9 +62,7 @@ while True:
             operacion.append(multiplicador)
         result=(f"{operaciones.operacion_texto(operacion,'x')}=  {operaciones.multiplicar(operacion)}")
         print(result)
-        history= open("CalcHistory.txt", "a",encoding="utf-8")
-        history.write(f"{str(result)} \n")
-        history.close()
+        validaciones.historial(result)
 
     #endregion
 
@@ -83,9 +74,7 @@ while True:
             operacion.append(division_valores)
         result=(f"{operaciones.operacion_texto(operacion,'/')}=  {operaciones.dividir(operacion)}")
         print(result)
-        history= open("CalcHistory.txt", "a",encoding="utf-8")
-        history.write(f"{str(result)} \n")
-        history.close()
+        validaciones.historial(result)
 
 #endregion
 
@@ -98,9 +87,7 @@ while True:
         else:
             result=(f"{factor}!=  {operaciones.factorial(factor)} ")
             print(result)
-            history= open("CalcHistory.txt", "a",encoding="utf-8")
-            history.write(f"{str(result)} \n")
-            history.close()
+            validaciones.historial(result)
 
 
 #endregion
@@ -113,9 +100,7 @@ while True:
             operacion.append(exponente_valores)
         result=(f"{operaciones.operacion_texto(operacion,'^')}=  {operaciones.exponencial(operacion)}")
         print(result)
-        history= open("CalcHistory.txt", "a",encoding="utf-8")
-        history.write(f"{str(result)} \n")
-        history.close()
+        validaciones.historial(result)
 
 
     #endregion
